@@ -1,0 +1,2 @@
+# Strona
+Strona do mgr
