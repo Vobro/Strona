@@ -1,0 +1,112 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content = "height = device-height, width = 420, user-scalable = no" />
+        <title>Panel sterowania lampą.</title>
+        <script type="text/javascript" src="/webiopi.js"></script>
+        <script type="text/javascript">
+        webiopi().ready(function() {
+                var content, button;
+                content = $("#content");
+                button_b = webiopi().createButton("allbutton", "ON", On);
+                content.append(button_b);
+                button_b = webiopi().createButton("allbuttonof", "OFF", Off);
+                content.append(button_b);
+                webiopi().refreshGPIO(true);
+        });
+
+        function On() {
+        webiopi().digitalWrite(26, 1);
+        webiopi().digitalWrite(20, 0);
+        }
+
+        function Off() {
+        webiopi().digitalWrite(20, 1);
+        webiopi().digitalWrite(26, 0);
+        webiopi().digitalWrite(21, 1);
+        }
+
+
+        function macroCallback(macro, args, data) {
+                alert(data);
+        }
+
+        </script>
+        <style type="text/css">
+                body {
+                        background-color: #445566;
+                }
+                button {
+                display: block;
+                width: auto;
+                height: auto;
+                margin: 20px;
+                background: #56db3b;
+                background-image: -webkit-linear-gradient(top, #56db3b, #16ad20);
+                background-image: -moz-linear-gradient(top, #56db3b, #16ad20);
+                background-image: -ms-linear-gradient(top, #56db3b, #16ad20);
+                background-image: -o-linear-gradient(top, #56db3b, #16ad20);
+                background-image: linear-gradient(to bottom, #56db3b, #16ad20);
+                -webkit-border-radius: 32;
+                -moz-border-radius: 32;
+                border-radius: 32px;
+                font-family: Arial;
+                color: #ffffff;
+                font-size: 28px;
+                padding: 10px 20px 10px 20px;
+                text-decoration: none;
+                }
+                button:hover {
+                -webkit-box-shadow: 13px 11px 30px rgba(50, 50, 50, 1);
+                -moz-box-shadow: 13px 11px 30px rgba(50, 50, 50, 1);
+                box-shadow: 13px 11px 30px rgba(50, 50, 50, 1);
+                cursor: pointer;
+                }
+
+                button:active {
+                background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+                background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+                }
+
+                input[type="range"] {
+                        display: block;
+                        width: 160px;
+                        height: 45px;
+                }
+                .LOW {
+                        background: #ffffff; /* Old browsers */
+                        background: -moz-linear-gradient(top, #ffffff 0%, #adadad 100%); /* FF3.6+ */
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#adadad)); /* Chrome,Safari4+ */
+                        background: -webkit-linear-gradient(top, #ffffff 0%,#adadad 100%); /* Chrome10+,Safari5.1+ */
+                        background: -o-linear-gradient(top, #ffffff 0%,#adadad 100%); /* Opera 11.10+ */
+                        background: -ms-linear-gradient(top, #ffffff 0%,#adadad 100%); /* IE10+ */
+                        background: linear-gradient(to bottom, #ffffff 0%,#adadad 100%); /* W3C */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#adadad',GradientType=0 ); /* IE6-9 */
+                        background-color: White;
+                }
+                .HIGH {
+                        background: #ff7768; /* Old browsers */
+                        background: -moz-linear-gradient(top, #ff7768 0%, #ff1a00 100%); /* FF3.6+ */
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7768), color-stop(100%,#ff1a00)); /* Chrome,Safari4+ */
+                        background: -webkit-linear-gradient(top, #ff7768 0%,#ff1a00 100%); /* Chrome10+,Safari5.1+ */
+                        background: -o-linear-gradient(top, #ff7768 0%,#ff1a00 100%); /* Opera 11.10+ */
+                        background: -ms-linear-gradient(top, #ff7768 0%,#ff1a00 100%); /* IE10+ */
+                        background: linear-gradient(to bottom, #ff7768 0%,#ff1a00 100%); /* W3C */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7768', endColorstr='#ff1a00',GradientType=0 ); /* IE6-9 */
+                        background-color: Red;
+                }
+        </style>
+</head>
+<body>
+        <div id="content" align="center"></div>
+</body>
+</html>
+
+

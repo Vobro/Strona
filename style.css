@@ -1,0 +1,84 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:helvetica;
+}
+
+#bg{
+  position:relative;
+  top:20px;
+  height:460px;
+  width:520px;
+  background-size:cover;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.naglowek{
+  font-family: comic;
+  color: #708090;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.module{
+  position:relative;
+  top:8%;
+  height:65%;
+  width:406px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:5px;
+  background:RGBA(255,255,255,1);
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+}
+
+.form{
+  float:left;
+  height:86%;
+  width:100%;
+  box-sizing:border-box;
+  padding:35px;
+}
+
+.textbox{
+  font-size: 20px;
+  height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:30px;
+}
+
+.textbox:focus{
+  outline:none;
+   border:rgba(24,149,215,1) 2px solid;
+   color:rgba(24,149,215,1);
+}
+.button{
+  height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:30px;
+  background:#90c843;
+  color:#FFF;
+  font-weight:bold;
+  font-size: 15pt;
+  transition:background .4s;
+  cursor:pointer;
+}
+
+.button:hover{
+  background:#80b438;
+}
