@@ -33,7 +33,7 @@ jobs:
     
     - name: AFDSF
       run: |
-        echo "$ZMIENNA" > .env
+        echo FLOTIQ.API.KEy="$ZMIENNA" > .env
         cat .env
       shell: bash
       env: # Or as an environment variable
