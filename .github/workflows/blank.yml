@@ -37,4 +37,4 @@ jobs:
         cat .env
       shell: bash
       env: # Or as an environment variable
-        ZMIENA: ${{ secrets.ZMIENNA }}
+        ZMIENNA: ${{ secrets.ZMIENNA }}
