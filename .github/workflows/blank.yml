@@ -23,11 +23,13 @@ jobs:
     - uses: actions/checkout@v2
 
 
-    - run: 'echo "$ZMIENNA" > key'
+    - name: CSOF
+      run: |
+        'echo "$ZMIENNA" > key'
+        cat key
       shell: bash
       env:
         ZMIENNA: ${{secrets.ZMIENNA}}
-    
     
     - shell: bash
       env: # Or as an environment variable
