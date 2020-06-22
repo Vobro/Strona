@@ -25,7 +25,7 @@ jobs:
 
     - name: CSOF
       run: |
-        echo "BUMP" > key
+        echo "$ZMIENNA" >> key
         cat key
       shell: bash
       env:
