@@ -27,6 +27,7 @@ jobs:
       run: |
         echo "$ZMIENNA" >> key
         cat key
+        pwd
       shell: bash
       env:
         ZMIENNA: ${{secrets.ZMIENNA}}
