@@ -31,10 +31,11 @@ jobs:
       env:
         ZMIENNA: ${{secrets.ZMIENNA}}
     
-    - shell: bash
+    - name: AFDSF
+      run: |
+        # echo "GATSBY_FLOTIQ_BASE_URL=" >> .env
+        echo FLOTIQ_API_KEY= "$ZMIENNA" > .env
+        cat .env
+      shell: bash
       env: # Or as an environment variable
         ZMIENA: ${{ secrets.ZMIENNA }}
-      run: |
-        echo "GATSBY_FLOTIQ_BASE_URL=" >> .env
-        echo FLOTIQ_API_KEY="$ZMIENNA" >> .env
-        cat .env
