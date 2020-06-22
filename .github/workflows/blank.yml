@@ -21,10 +21,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
+
     - name: Enter information to .env file
       env: # Or as an environment variable
-        super_secret: ${{ secrets.ZMIENNA }}
+        ZMIENA: ${{ secrets.ZMIENNA }}
       run: |
         echo "GATSBY_FLOTIQ_BASE_URL=" >> .env
         echo FLOTIQ_API_KEY="$ZMIENNA" >> .env
